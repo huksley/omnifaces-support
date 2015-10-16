@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions">
+<body>
+
+	<h:form>
+		SomeID: #{SampleBean.someId}
+		<p></p>
+		<o:commandScript name="testSomeId" action="#{SampleBean.hello()}" render="@form" />
+		<p></p>
+		<a href="#" onClick="testSomeId({ 'someId': 'someValue' })">Test SomeID</a>
+		<p></p>
+		<h:commandLink action="#{SampleBean.hello()}" value="Test SomeID2">
+			<f:ajax render="@form"/>
+            <f:param name="someId" value="someValue2" />
+        </h:commandLink>		
+	</h:form>
+</body>
+</html>
