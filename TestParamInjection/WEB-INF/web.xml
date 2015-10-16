@@ -38,11 +38,6 @@
         <param-value>server</param-value>
     </context-param>
 
-    <context-param>
-        <param-name>primefaces.THEME</param-name>
-        <param-value>bootstrap</param-value>
-    </context-param>
-
     <!-- http://stackoverflow.com/questions/19659169/viewexpiredexception-no-saved-view-state-could-be-found-on-submitting-a-form-i -->
 	<context-param>
 		<param-name>org.apache.myfaces.SERIALIZE_STATE_IN_SESSION</param-name>
