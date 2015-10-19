@@ -17,7 +17,11 @@
 			<f:viewAction action="#{SampleBean.viewAction}"/>
 		</f:metadata>
 	</ui:define>
+
 	<ui:define name="content">
+		<h2>Testing @Param and viewParam with template</h2>
+		<a href="test.xhtml">Without template</a> | <a href="test2.xhtml">With template</a>
+
 		<h:form>
 			Bean: #{SampleBean}
 			<p></p>
@@ -32,7 +36,7 @@
 	            <f:param name="someId" value="someValue2" />
 	        </h:commandLink>
 	        <p></p>
-			<h:link outcome="test.xhtml" value="Test SomeID3">
+			<h:link outcome="test2.xhtml" value="Test SomeID3">
 	            <f:param name="someId" value="someValue3" />
 			</h:link>
 		</h:form>

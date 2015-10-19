@@ -8,15 +8,15 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.omnifaces.cdi.ViewScoped;
+import org.omnifaces.cdi.Param;
 
 @RequestScoped
 @Named("SampleBean")
 public class SampleBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//@Inject
-	//@Param
+	@Inject
+	@Param
 	private	String someId = "NOT_SET";
 	
 	public SampleBean() {

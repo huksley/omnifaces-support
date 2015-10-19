@@ -8,14 +8,18 @@
 	xmlns:o="http://omnifaces.org/ui"
 	xmlns:of="http://omnifaces.org/functions">
 
-	<f:metadata>
-		<f:viewParam name="someId" value="#{SampleBean.someId}"/>
-		<f:viewAction action="#{SampleBean.viewAction}"/>
-	</f:metadata>
+<f:metadata>
+	<f:viewParam name="someId" value="#{SampleBean.someId}"/>
+	<f:viewAction action="#{SampleBean.viewAction}"/>
+</f:metadata>
 
 <h:head>
-</h:head>	
+</h:head>
+
 <h:body>
+	<h2>Testing @Param and viewParam without template</h2>
+	<a href="test.xhtml">Without template</a> | <a href="test2.xhtml">With template</a>
+
 	<h:form>
 		Bean: #{SampleBean}
 		<p></p>
