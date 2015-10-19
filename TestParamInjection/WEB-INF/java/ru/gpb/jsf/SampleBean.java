@@ -1,17 +1,22 @@
 package ru.gpb.jsf;
 
+import java.io.Serializable;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.omnifaces.cdi.Param;
+import org.omnifaces.cdi.ViewScoped;
 
 @RequestScoped
 @Named("SampleBean")
-public class SampleBean {
-	@Inject @Param(name = "someId")
+public class SampleBean implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	//@Inject
+	//@Param
 	private	String someId = "NOT_SET";
 	
 	public SampleBean() {
@@ -21,7 +26,7 @@ public class SampleBean {
 	@PostConstruct
 	public void init() {
 		System.out.println("Bean init");
-		someId = "INITED";
+		// someId = "INITED";
 	}
 	
 	public void hello() {
@@ -33,6 +38,11 @@ public class SampleBean {
 	}
 
 	public void setSomeId(String someId) {
+		System.out.println("Set someId = " + someId);
 		this.someId = someId;
+	}
+	
+	public void viewAction() {
+		System.out.println("View action!");
 	}
 }

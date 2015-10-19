@@ -21,7 +21,7 @@
 	<classpathentry kind="lib" path="WEB-INF/lib/jcl-over-slf4j-1.7.12.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/myfaces-api-2.2.8.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/myfaces-impl-2.2.8.jar"/>
-	<classpathentry kind="lib" path="WEB-INF/lib/omnifaces-2.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/omnifaces-2.1.jar" sourcepath="/BankruptService/WEB-INF/lib/omnifaces-2.1-sources.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/primefaces-5.2.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/slf4j-api-1.7.12.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/slf4j-jdk14-1.7.12.jar"/>

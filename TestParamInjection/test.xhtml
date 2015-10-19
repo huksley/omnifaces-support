@@ -7,10 +7,18 @@
 	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
 	xmlns:o="http://omnifaces.org/ui"
 	xmlns:of="http://omnifaces.org/functions">
-<body>
-    <h:head>
-	</h:head>
+
+	<f:metadata>
+		<f:viewParam name="someId" value="#{SampleBean.someId}"/>
+		<f:viewAction action="#{SampleBean.viewAction}"/>
+	</f:metadata>
+
+<h:head>
+</h:head>	
+<h:body>
 	<h:form>
+		Bean: #{SampleBean}
+		<p></p>
 		SomeID: #{SampleBean.someId}
 		<p></p>
 		<o:commandScript name="testSomeId" action="#{SampleBean.hello()}" render="@form" />
@@ -20,10 +28,11 @@
 		<h:commandLink action="#{SampleBean.hello()}" value="Test SomeID2">
 			<f:ajax render="@form"/>
             <f:param name="someId" value="someValue2" />
-        </h:commandLink>		
+        </h:commandLink>
+        <p></p>
+		<h:link outcome="test.xhtml" value="Test SomeID3">
+            <f:param name="someId" value="someValue3" />
+		</h:link>
 	</h:form>
-
-	<pre>
-	</pre>
-</body>
+</h:body>
 </html>
